@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple CRM Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="crm-container">
+        <h1>Simple CRM Demo</h1>
+
+        <nav class="tabs">
+            <button class="tab-button active" data-tab="contacts">Contacts</button>
+            <button class="tab-button" data-tab="leads">Leads</button>
+            <button class="tab-button" data-tab="tasks">Tasks</button>
+        </nav>
+
+        <div id="contacts" class="tab-content active">
+            <h2>Contacts</h2>
+            <form id="contactForm" class="add-form">
+                <input type="text" id="contactName" placeholder="Name" required>
+                <input type="email" id="contactEmail" placeholder="Email">
+                <input type="tel" id="contactPhone" placeholder="Phone">
+                <button type="submit">Add Contact</button>
+            </form>
+            <ul id="contactList" class="data-list">
+                </ul>
+        </div>
+
+        <div id="leads" class="tab-content">
+            <h2>Leads</h2>
+            <form id="leadForm" class="add-form">
+                <input type="text" id="leadName" placeholder="Company/Lead Name" required>
+                <input type="email" id="leadEmail" placeholder="Contact Email">
+                <select id="leadStatus">
+                    <option value="New">New</option>
+                    <option value="Qualified">Qualified</option>
+                    <option value="Contacted">Contacted</option>
+                    <option value="Converted">Converted</option>
+                </select>
+                <button type="submit">Add Lead</button>
+            </form>
+            <ul id="leadList" class="data-list">
+                </ul>
+        </div>
+
+        <div id="tasks" class="tab-content">
+            <h2>Tasks</h2>
+            <form id="taskForm" class="add-form">
+                <input type="text" id="taskDescription" placeholder="Task Description" required>
+                <input type="date" id="taskDueDate">
+                <button type="submit">Add Task</button>
+            </form>
+            <ul id="taskList" class="data-list">
+                </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
